@@ -12,21 +12,18 @@ class Application
       item = @@items.find{|s| s.name == item_name}
       
       if item
- 
-      resp.write item.price
-      else
+        resp.write item.price
+      else  
           resp.write "Item not found"
           resp.status = 400
-      
-      
       end
       
-     else
+    else
       resp.write "Route not found"
       resp.status = 404
       
     end
-   resp.finish
+    resp.finish
    end
  end
  
